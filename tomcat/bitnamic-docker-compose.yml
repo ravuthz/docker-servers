@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+    web:
+        image: bitnami/tomcat:latest
+        
+        container_name: mytomcat
+        ports:
+            - '8080:8080'
+        volumes: 
+            - ./bitnami:/bitnami
+        environment: 
+            - TOMCAT_USERNAME=adminz
+            - TOMCAT_PASSWORD=123123
+            - TOMCAT_ALLOW_REMOTE_MANAGEMENT=1
+          
+
+        
